@@ -1,0 +1,22 @@
+{
+
+"users": [
+
+    { 
+        "id" : 1,
+        "userName": "Snoh Alegra",
+        "email": "snoh@me.com",
+        "password": "letitsnoh!"
+
+    }
+
+],
+
+"userProviders": [],
+
+
+
+"notes": []
+
+
+}
