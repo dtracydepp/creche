@@ -3,6 +3,8 @@ import {Login} from "./components/auth/Login"
 import {Register} from "./components/auth/Register"
 import logo from './logo.svg';
 import './App.css';
+import { SearchAll } from "./button/SearchAllButton";
+import {ApplicationViews} from "./ApplicationViews"
 
 
 export const App = () => (
@@ -13,7 +15,11 @@ export const App = () => (
     if (localStorage.getItem("app_user_id")) {
         return (
             <>
-                //Components that are rendered when the user is authenticated go inside this React fragment
+               
+                <Route render={props => <SearchAll {...props} />} />
+                <Route render={props => <ApplicationViews {...props} />} />
+
+
             </>
         )
     } else {

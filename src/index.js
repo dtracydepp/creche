@@ -9,7 +9,6 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
     <App />
-    console.log("test")
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
