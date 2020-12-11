@@ -7,6 +7,9 @@ export const Care = ({ care }) => (
         <address className="care__streetaddress">{care.streetAddress}</address>
         <city className="care__city">{care.city}</city>
         <state className="care__state">{care.state}</state>
-        <zip className="care__zip">{care.zip}</zip>
+        <zip className="care__zip">{care.zipCode}</zip>
+        {/* <button onClick={() => props.history.push("/favproviders")}>
+               Favorite
+            </button> */}
     </section>
 )

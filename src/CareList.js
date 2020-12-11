@@ -28,6 +28,7 @@ export const CareList = () => {
 
     return (
         <div className="providers">
+            <h3>Nashville, TN Child Care Providers</h3>
         {
             providers.map(care => <Care key={care.id} care={care} />)
         }

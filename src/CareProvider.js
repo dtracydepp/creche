@@ -15,7 +15,7 @@ export const CareProvider = (props) => {
             .then(setProviders)
     }
 
-    
+   
 
     /*
         Returns a context provider which has the
