@@ -10,31 +10,21 @@ export const CareProvider = (props) => {
     const [providers, setProviders] = useState([])
 
     const getProviders = () => {
-        return fetch("https://accwebservices.dhs.tn.gov/accweb/getProviders?countyId=19")
+        return fetch("http://localhost:8090/providers")
             .then(res => res.json())
             .then(setProviders)
     }
 
-    const addProvider = provider => {
-        return fetch("https://accwebservices.dhs.tn.gov/accweb/getProviders?countyId=19", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(provider)
-        })
-            .then(getProviders)
-    }
+    
 
     /*
         Returns a context provider which has the
-        `providers` state, the `addProvider` function,
-        and the `getProviders` function as keys. This
+        `providers` state and the `getProviders` function as keys. This
         allows any child elements to access them.
     */
     return (
         <CareContext.Provider value={{
-            providers, addProvider, getProviders
+            providers, getProviders
         }}>
             {props.children}
         </CareContext.Provider>

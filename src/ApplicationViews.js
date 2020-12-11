@@ -8,7 +8,7 @@ export const ApplicationViews = (props) => {
     return (
         <>
               <CareProvider>
-              <Route exact path="" render={
+              <Route exact path="/allproviders" render={
                             props => <CareList {...props} />
                         } />
                 </CareProvider>
