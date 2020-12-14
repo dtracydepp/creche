@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from "react"
+import React, {useContext, useEffect,useState } from "react"
 import { CareContext } from "./CareProvider"
 import {Care} from "./Care"
 import "./Care.css"
 
-export const CareList = () => {
+export const CareList = ({history}) => {
     // This state changes when `getProviders()` is invoked below
 
     const { providers, getProviders } = useContext(CareContext)

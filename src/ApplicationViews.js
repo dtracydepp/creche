@@ -1,24 +1,23 @@
 import React from "react"
 import { Route } from "react-router-dom"
+// import { CareDetails } from "./CareDetails"
 import {CareList} from "./CareList"
 import {CareProvider} from "./CareProvider"
-import {FavoriteProviderList} from "./FavoriteProviderList"
+
 
 
 export const ApplicationViews = (props) => {
     return (
         <>
               <CareProvider>
-              {/* <FavoriteProviderList> */}
+             
               <Route exact path="/allproviders" render={
                             props => <CareList {...props} />
                         } />
-                
+                {/* <Route path="/providers/:providerId(/d+)" render={
+                    props => <CareDetails{...props} />
+                } /> */}
                    
-                       <Route exact path="./favproviders" render={
-                           props=> <CareList {...props} />
-                       }/>
-                       {/* </FavoriteProviderList>      */}
                        </CareProvider>
 
         </>

@@ -15,7 +15,10 @@ export const CareProvider = (props) => {
             .then(setProviders)
     }
 
-   
+    const getProviderbyId = (providerId) => {
+        return fetch(`http://localhost:8090/providers/${providerId}`)
+        .then(res => res.json())
+    }
 
     /*
         Returns a context provider which has the
@@ -24,9 +27,10 @@ export const CareProvider = (props) => {
     */
     return (
         <CareContext.Provider value={{
-            providers, getProviders
+            providers, getProviders, getProviderbyId
         }}>
             {props.children}
         </CareContext.Provider>
     )
 }
+
