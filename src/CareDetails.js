@@ -3,7 +3,7 @@ import {CareContext} from "./CareProvider"
 import "./Care.css"
 
 export const CareDetails = (props) => {
-    const {providers, getProviders, setProviders, getProviderbyId} = useContext(CareContext)
+    const {providers, getProviders, setProviders, getProviderbyId, addFavorite} = useContext(CareContext)
 
     // const [provider, setProvider] =useState({})
     const providerId = parseInt(props.match.params.providerId)
@@ -17,29 +17,40 @@ export const CareDetails = (props) => {
 
 console.log(props)
 return (
-    // Test info
-
-    <section className="care">
+<>
+    
         {
             providers.map(provider=>{
                 if (provider.providerId===providerId){
                     return (
                         <>
-                         <h3 className="care__name">{provider.providerName}</h3>
-    <div className="care__streetaddress">{provider.streetAddress}</div>
-    <div className="care__city">{provider.city}, {provider.state} {provider.zipCode}</div>
-    <button onClick={() => props.history.push(`/providers/${providerId}`)}>
-                Save Provider
-            </button>
-                        </>
-                    )
-                }
-            })
-        }
-   
-
-        </section>
-
+                        <h3 className="care__name">{provider.providerName}</h3>
+<div className="care__streetaddress">{provider.streetAddress}</div>
+<div className="care__city">{provider.city}, {provider.state} {provider.zipCode}</div>
+                        <button onClick={()=>{
+                          addFavorite({
+                            userId:parseInt(localStorage.getItem("app_user_id")),
+                            providerId:parseInt(provider.providerId),
+                            providerName:provider.providerName,
+                            streetAddress:provider.streetAddress
+                          }).then(()=>{props.history.push(`/`)
+                        })
+                      }}>Save Provider</button>
+                      </>
+                      )    
+            
+                    
+                    
+                    
+                    
+            }})
+                
+                
+            
+}
+            
+  </>          
 )
 
 }
+{/*  */}

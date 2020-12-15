@@ -1,22 +1,20 @@
 {
-
-"users": [
-
-    { 
-        "id" : 1,
-        "userName": "Snoh Alegra",
-        "email": "snoh@me.com",
-        "password": "letitsnoh!"
-
+  "users": [
+    {
+      "id": 1,
+      "userName": "Snoh Alegra",
+      "email": "snoh@me.com",
+      "password": "letitsnoh!"
     }
-
-],
-
-"userProviders": [],
-
-
-
-"notes": []
-
-
+  ],
+  "userProviders": [
+    {
+      "userId": 1,
+      "providerId": 819,
+      "providerName": "ST. PAUL CHRISTIAN ACADEMY (-E-)",
+      "streetAddress": "5035 HILLSBORO ROAD",
+      "id": 1
+    }
+  ],
+  "notes": []
 }
