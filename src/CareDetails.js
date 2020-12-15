@@ -1,34 +1,45 @@
-// import React, {useContext, useEffect, useState} from "react"
-// import {CareContext} from "./CareProvider"
-// import "./Care.css"
+import React, {useContext, useEffect, useState} from "react"
+import {CareContext} from "./CareProvider"
+import "./Care.css"
 
-// export const CareDetails = (props) => {
-//     const {getProviderbyId} = useContext(CareContext)
+export const CareDetails = (props) => {
+    const {providers, getProviders, setProviders, getProviderbyId} = useContext(CareContext)
 
-//     const [providers, setProviders] =useState({})
-
-//     useEffect (() => {
-//         const providerId = parseInt(props.match.params.providerId)
-//         getProviderbyId(providerId)
-//         .then(setProviders)
-//     }, [])
+    // const [provider, setProvider] =useState({})
+    const providerId = parseInt(props.match.params.providerId)
+    useEffect (() => {
+        getProviders()
+        // getProviderbyId(providerId)
+        // .then(setProvider)
+        
+    }, [])
     
 
+console.log(props)
+return (
+    // Test info
 
-// return (
-//     // Test info
-//     <section className="care">
-//     <h3 className="care__name">{providers.providerName}</h3>
-//     <div className="care__streetaddress">{providers.streetAddress}</div>
-//     <div className="care__city">{providers.city}</div>
-//     <div className="care__state">{providers.state}</div>
-//     <div className="care__zip">{providers.zipCode}</div>
-//     <button onClick={() => props.history.push(`/allproviders/${providerId})`}>
-//                 Save Favorite Provider
-//             </button>
+    <section className="care">
+        {
+            providers.map(provider=>{
+                if (provider.providerId===providerId){
+                    return (
+                        <>
+                         <h3 className="care__name">{provider.providerName}</h3>
+    <div className="care__streetaddress">{provider.streetAddress}</div>
+    <div className="care__city">{provider.city}, {provider.state} {provider.zipCode}</div>
+    <button onClick={() => props.history.push(`/providers/${providerId}`)}>
+                Save Provider
+            </button>
+                        </>
+                    )
+                }
+            })
+        }
+   
 
-//         </section>
+        </section>
 
-// )
+)
 
-// }
+}

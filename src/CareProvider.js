@@ -8,6 +8,7 @@ export const CareContext = React.createContext()
 
 export const CareProvider = (props) => {
     const [providers, setProviders] = useState([])
+    const [providerId, setProviderId] = useState([])
 
     const getProviders = () => {
         return fetch("http://localhost:8090/providers")
@@ -18,6 +19,7 @@ export const CareProvider = (props) => {
     const getProviderbyId = (providerId) => {
         return fetch(`http://localhost:8090/providers/${providerId}`)
         .then(res => res.json())
+        .then(setProviderId)
     }
 
     /*
@@ -27,7 +29,7 @@ export const CareProvider = (props) => {
     */
     return (
         <CareContext.Provider value={{
-            providers, getProviders, getProviderbyId
+            providers, getProviders, getProviderbyId,providerId
         }}>
             {props.children}
         </CareContext.Provider>

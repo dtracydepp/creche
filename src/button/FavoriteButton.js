@@ -5,7 +5,7 @@ export const FavoriteButton = (props) => {
     return (
 
         <button onClick={() => props.history.push("/favproviders")}>
-                Favorite
+               Save Provider
             </button>
 
     )
