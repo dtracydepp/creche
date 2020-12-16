@@ -1,10 +1,10 @@
 import React, { useContext, useEffect } from "react"
-import { CareContext } from "./CareProvider"
-import { Care} from "./Care"
-import "./Care.css"
+import { UserContext } from "./UserProvider"
+import { User} from "./User"
+import "./User.css"
 
 export const FavoriteProviderList = ({ history }) => {
-    const { getProviders, providers } = useContext(CareContext)
+    const { getProviders, providers } = useContext(UserContext)
 
     // Initialization effect hook -> Go get provider data..I don't think I need this
     useEffect(()=>{
