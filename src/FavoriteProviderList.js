@@ -1,28 +1,35 @@
 import React, { useContext, useEffect } from "react"
-import { CareContext } from "./CareProvider"
-import { Care} from "./Care"
-import "./Care.css"
+import { UserContext } from "./UserProvider"
+import {Care} from "./Care"
+
+// import "./User.css"
 
 export const FavoriteProviderList = ({ history }) => {
-    const { getProviders, providers } = useContext(CareContext)
+    const { getUserProviders, userProviders } = useContext(UserContext)
 
-    // Initialization effect hook -> Go get provider data
-    useEffect(()=>{
-        getProviders()
+    // Initialization effect hook -> Go get provider data..I don't think I need this
+    useEffect(() => {
+        getUserProviders()
     }, [])
 
     return (
-        <>
+
+        <div className="favproviders">
             <h1>Favorite Providers</h1>
 
-            <button onClick={() => history.push("/favproviders")}>
-                Favorite 
-            </button>
-            <div className="favproviders">
+
             {
-            providers.map(care => <Care key={care.id} care={care} />)
-        }
-            </div>
-        </>
+                
+            userProviders.map(care =>{
+              return  <>
+                
+             <Care key={care.id} care={care} />
+             <button> Add Note </button>
+             </>})
+            }
+            
+        </div>
+
     )
 }
+
