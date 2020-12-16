@@ -19,7 +19,7 @@ export const App = () => (
                         <p>Hello, let us help you find the perfect child care provider!</p>
                         <Route render={props => <SearchAll {...props} />} />
                         <Route render={props => <ApplicationViews {...props} />} />
-                        
+
 
                     </>
                 )

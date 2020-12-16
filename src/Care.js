@@ -11,9 +11,7 @@ export const Care = ({ care }) => (
             </Link>
             </h3>
         <div className="care__streetaddress">{care.streetAddress}</div>
-        <div className="care__city">`{care.city}</div>
-        <div className="care__state">{care.state}</div>
-        <div className="care__zip">{care.zipCode}</div>
+        <div className="care__city">`{care.city}, {care.state} {care.zipCode} </div>
         
             </section>
 )

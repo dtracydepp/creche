@@ -6,17 +6,17 @@ import "./Care.css"
 export const FavoriteProviderList = ({ history }) => {
     const { getProviders, providers } = useContext(CareContext)
 
-    // Initialization effect hook -> Go get provider data
+    // Initialization effect hook -> Go get provider data..I don't think I need this
     useEffect(()=>{
         getProviders()
     }, [])
 
     return (
         <>
+           
             <h1>Favorite Providers</h1>
-
             <button onClick={() => history.push("/favproviders")}>
-                Favorite 
+                Add Note
             </button>
             <div className="favproviders">
             {
@@ -26,3 +26,4 @@ export const FavoriteProviderList = ({ history }) => {
         </>
     )
 }
+

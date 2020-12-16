@@ -14,6 +14,34 @@
       "providerName": "ST. PAUL CHRISTIAN ACADEMY (-E-)",
       "streetAddress": "5035 HILLSBORO ROAD",
       "id": 1
+    },
+    {
+      "userId": 1,
+      "providerId": 819,
+      "providerName": "ST. PAUL CHRISTIAN ACADEMY (-E-)",
+      "streetAddress": "5035 HILLSBORO ROAD",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "providerId": 819,
+      "providerName": "ST. PAUL CHRISTIAN ACADEMY (-E-)",
+      "streetAddress": "5035 HILLSBORO ROAD",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "providerId": 821,
+      "providerName": "ST. BERNARD ACADEMY (-E-)",
+      "streetAddress": "2304 Bernard Avenue",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "providerId": 53,
+      "providerName": "Early Learning Day Care Center, Inc. ",
+      "streetAddress": "2729 Whites Creek  Pike",
+      "id": 5
     }
   ],
   "notes": []

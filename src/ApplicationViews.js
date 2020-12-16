@@ -3,6 +3,7 @@ import { Route } from "react-router-dom"
 import { CareDetails } from "./CareDetails"
 import {CareList} from "./CareList"
 import {CareProvider} from "./CareProvider"
+import { FavoriteProviderList } from "./FavoriteProviderList"
 
 
 
@@ -18,6 +19,9 @@ export const ApplicationViews = (props) => {
                     props => <CareDetails {...props} />
                 } />
                    
+                <Route exact path="/favproviders" render={
+                    props => <FavoriteProviderList {...props} />
+                } />
                        </CareProvider>
 
         </>
