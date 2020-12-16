@@ -24,7 +24,7 @@ export const UserProvider = (props) => {
 
    
     const addNote = (userproviders) => {
-               return fetch ("http://localhost:8088/userProviders", {
+               return fetch ("http://localhost:8088/notes", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

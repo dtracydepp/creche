@@ -24,6 +24,7 @@ export const ApplicationViews = (props) => {
                         props => <FavoriteProviderList {...props} />
                     } />
 
+
                 </UserProvider>
             </CareProvider>
 
