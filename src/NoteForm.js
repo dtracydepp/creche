@@ -29,29 +29,7 @@ export const NoteForm = (props ) => {
 
         </form>
     )
-    /*
-        Get favlist state on initialization.
-    */
-    // useEffect(() => {
-    //    getUserProviders
-    // }, [])
 
-    // const constructNewProvider = () => {
-
-    //     const userProviderId = parseInt(user.current.value)
-    //     const id = parseInt(id.current.value)
-
-    //     if (id === 0) 
-
-    //     else {
-    //         addNote({
-
-    //            userProviderId,
-    //            id
-    //         })
-    //         .then(() => props.history.push("/notes/create"))
-    //     }
-    // }
 
     return (
         <h1>Hi</h1>
