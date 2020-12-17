@@ -23,17 +23,7 @@ export const CareProvider = (props) => {
     }
 
    
-    const addFavorite = (provider) => {
-               return fetch ("http://localhost:8088/userProviders", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body:JSON.stringify(provider)
-    })
-        
-    }
-
+   
     /*
         Returns a context provider which has the
         `providers` state and the `getProviders` function as keys. This
@@ -41,7 +31,7 @@ export const CareProvider = (props) => {
     */
     return (
         <CareContext.Provider value={{
-            providers, getProviders, getProviderbyId,providerId, addFavorite
+            providers, getProviders, getProviderbyId,providerId
         }}>
             {props.children}
         </CareContext.Provider>

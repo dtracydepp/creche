@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from "react"
 import { CareContext } from "./CareProvider"
 import "./Care.css"
+import { UserContext } from "./UserProvider"
 
 export const CareDetails = (props) => {
-  const { providers, getProviders, setProviders, getProviderbyId, addFavorite } = useContext(CareContext)
+  const { providers, getProviders, setProviders, getProviderbyId } = useContext(CareContext)
+  const {addFavorite} =useContext(UserContext)
 
   // const [provider, setProvider] =useState({})
   const providerId = parseInt(props.match.params.providerId)

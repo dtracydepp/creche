@@ -18,20 +18,30 @@ export const UserProvider = (props) => {
 
     const getUserProviderbyId = (userProviderId) => {
         return fetch(`http://localhost:8088/userProviders/${userProviderId}`)
-        .then(res => res.json())
-        .then(setUserProviderId)
+            .then(res => res.json())
+            .then(setUserProviderId)
+    }
+    const addFavorite = (provider) => {
+        return fetch("http://localhost:8088/userProviders", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(provider)
+        })
+            .then(getUserProviders)
     }
 
-   
+
     const addNote = (userproviders) => {
-               return fetch ("http://localhost:8088/userProviders", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body:JSON.stringify(userproviders)
-    })
-        
+        return fetch("http://localhost:8088/notes", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(userproviders)
+        })
+
     }
 
     /*
@@ -41,7 +51,7 @@ export const UserProvider = (props) => {
     */
     return (
         <UserContext.Provider value={{
-            userProviders, getUserProviders, getUserProviderbyId,userProviderId, addNote
+            userProviders, getUserProviders, getUserProviderbyId, userProviderId, addNote, addFavorite
         }}>
             {props.children}
         </UserContext.Provider>
