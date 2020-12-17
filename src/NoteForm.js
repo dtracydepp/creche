@@ -1,61 +1,60 @@
 import React, { useContext, useRef, useEffect } from "react"
 import { UserContext } from "./UserProvider"
 
-export const NoteForm = ({ props, savedList }) => {
+export const NoteForm = (props ) => {
     const { addNote } = useContext(UserContext)
-    console.log(savedList)
+    
 
-        //     const note = useRef(null)
-        //    const user = useRef(null)
-        //    const id  = useRef(null)
+    const note = useRef(null)
 
+    const constructNewNote = () => {
+        // holds the variable that was declared in the url is stored
+        addNote({
+            userProviderId: parseInt(props.match.params.userProviderId),
+            text: note.current.value
+        }) .then(()=>props.history.push("/favproviders"))
+    }
 
-        //     /*
-        //         Get favlist state on initialization.
-        //     */
-        //     useEffect(() => {
-        //        getUserProviders
-        //     }, [])
+    return (
+        <form className="note">
+            <label htmlFor="associated-note"> Type Note Here</label>
+            <input id="associated-note"
+                type="text"
+                ref={note}
+            />
+            <button onClick={evt => {
+                evt.preventDefault()
+                constructNewNote()
+            }}>Save Note</button>
 
-        //     // const constructNewProvider = () => {
-        //        
-        //         const userProviderId = parseInt(user.current.value)
-        //         const id = parseInt(id.current.value)
+        </form>
+    )
+    /*
+        Get favlist state on initialization.
+    */
+    // useEffect(() => {
+    //    getUserProviders
+    // }, [])
 
-        //     //     if (id === 0) 
+    // const constructNewProvider = () => {
 
-        //     //     else {
-        //     //         addNote({
+    //     const userProviderId = parseInt(user.current.value)
+    //     const id = parseInt(id.current.value)
 
-        //     //            userProviderId,
-        //     //            id
-        //     //         })
-        //     //         .then(() => props.history.push("/notes/create"))
-        //     //     }
-        //     // }
+    //     if (id === 0) 
 
-        //     return (
-        //         <form className="noteForm">
-        //             <h2 className="noteForm__title">Notes</h2>
-        //             <form onSubmit={this.handleSubmit}>
-//         <label>
-//         Note:
-//     <textarea type="text" name="note" className="form-control"
-// //                         value={note.userProviderId}---not sure about this
-// //                         onChange={handleControlledInputChange}>
-// //                     </> 
-//     </label >
-//     <input type="submit" value="Submit" />
-// //             </form>
+    //     else {
+    //         addNote({
 
-// //             <button type="submit"
-// //                 onClick={evt => {
-//                     evt.preventDefault() // Prevent browser from submitting the form
-//                     constructNewProvider()
-//                 }}
-//                 className="btn btn-primary">
-//                 Save Note
-//             </button>
-//         </form>
-//     )
+    //            userProviderId,
+    //            id
+    //         })
+    //         .then(() => props.history.push("/notes/create"))
+    //     }
+    // }
+
+    return (
+        <h1>Hi</h1>
+    )
+
 }
