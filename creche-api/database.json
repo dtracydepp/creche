@@ -15,7 +15,6 @@
       "streetAddress": "5035 HILLSBORO ROAD",
       "id": 1
     },
-    
     {
       "userId": 1,
       "providerId": 821,
@@ -30,17 +29,27 @@
       "streetAddress": "2729 Whites Creek  Pike",
       "id": 5
     },
-    
-   
     {
       "userId": 1,
       "providerId": 57,
       "providerName": "Goodall Group Day Care Home ",
       "streetAddress": "703 North Graycroft Avenue",
       "id": 10
+    },
+    {
+      "userId": 1,
+      "providerId": 819,
+      "providerName": "ST. PAUL CHRISTIAN ACADEMY (-E-)",
+      "streetAddress": "5035 HILLSBORO ROAD",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "providerId": 819,
+      "providerName": "ST. PAUL CHRISTIAN ACADEMY (-E-)",
+      "streetAddress": "5035 HILLSBORO ROAD",
+      "id": 12
     }
-    
-   
   ],
   "notes": []
 }
