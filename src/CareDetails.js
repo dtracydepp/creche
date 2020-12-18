@@ -5,19 +5,18 @@ import { UserContext } from "./UserProvider"
 
 export const CareDetails = (props) => {
   const { providers, getProviders, setProviders, getProviderbyId } = useContext(CareContext)
-  const {addFavorite} =useContext(UserContext)
+  const { addFavorite } = useContext(UserContext)
 
-  // const [provider, setProvider] =useState({})
+
   const providerId = parseInt(props.match.params.providerId)
   useEffect(() => {
     getProviders()
-    // getProviderbyId(providerId)
-    // .then(setProvider)
+
 
   }, [])
 
 
-  console.log(props)
+  // console.log(props)
   return (
     <>
 
@@ -47,7 +46,7 @@ export const CareDetails = (props) => {
 
 
 
-// !does not equal
+            // !does not equal
 
           } else if (provider.providerId === providerId && !provider.hasViolation) {
             return (
@@ -81,4 +80,3 @@ export const CareDetails = (props) => {
   )
 
 }
-{/*  */ }

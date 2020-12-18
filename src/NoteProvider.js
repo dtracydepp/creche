@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react"
 
 export const NoteContext = React.createContext()
 
-// pulls data from external API
+// pulls data from API
 
 export const NoteProvider = (props) => {
     const [notes, setNotes] = useState([])

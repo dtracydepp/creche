@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react"
 
 export const UserContext = React.createContext()
 
-// pulls data from external API
+// pulls data from API
 
 export const UserProvider = (props) => {
     const [userProviders, setUserProviders] = useState([])

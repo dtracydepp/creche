@@ -4,11 +4,13 @@ import React, { useState, useEffect } from "react"
 
 export const CareContext = React.createContext()
 
-// pulls data from external API
+
 
 export const CareProvider = (props) => {
     const [providers, setProviders] = useState([])
     const [providerId, setProviderId] = useState([])
+
+    // pulls data from external API
 
     const getProviders = () => {
         return fetch("http://localhost:8090/providers")
@@ -26,7 +28,7 @@ export const CareProvider = (props) => {
    
     /*
         Returns a context provider which has the
-        `providers` state and the `getProviders` function as keys. This
+        `providers` and providerId state and the `getProviders` and getProviderbyId functions as keys. This
         allows any child elements to access them.
     */
     return (

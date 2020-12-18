@@ -13,7 +13,7 @@ export const CareList = ({history}) => {
         then gets the data, then re-renders.
     */
     useEffect(() => {
-        console.log("CareList: Initial render before data")
+        // console.log("CareList: Initial render before data")
         getProviders()
     }, [])
 
@@ -22,8 +22,8 @@ export const CareList = ({history}) => {
         it is responding to is that the providers state changed.
     */
     useEffect(() => {
-        console.log("CareList: state changed")
-        console.log(providers)
+        // console.log("CareList: state changed")
+        // console.log(providers)
     }, [providers])
 
     return (

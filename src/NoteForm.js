@@ -31,8 +31,5 @@ export const NoteForm = (props ) => {
     )
 
 
-    return (
-        <h1>Hi</h1>
-    )
-
+    
 }
