@@ -5,7 +5,8 @@ import React, { useState, useEffect } from "react"
 export const CareContext = React.createContext()
 
 
-
+// useState setting the variable initial state to an empty array and then putting things into that array so 
+// I have access to that information later in my code.
 export const CareProvider = (props) => {
     const [providers, setProviders] = useState([])
     const [providerId, setProviderId] = useState([])
@@ -15,14 +16,15 @@ export const CareProvider = (props) => {
     const getProviders = () => {
         return fetch("http://localhost:8090/providers")
             .then(res => res.json())
-            // setProviders method ...returns providers variable?
+            // setProviders returns variable, providers?
             .then(setProviders) 
     }
 
     const getProviderbyId = (providerId) => {
         return fetch(`http://localhost:8090/providers/${providerId}`)
         .then(res => res.json())
-        .then(setProviderId)
+        // setProviderId returns variable, providerId?
+        .then(setProviderId) 
     }
 
    

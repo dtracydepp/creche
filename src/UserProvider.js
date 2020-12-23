@@ -5,7 +5,8 @@ import React, { useState, useEffect } from "react"
 export const UserContext = React.createContext()
 
 // pulls data from API
-
+// useState setting the variable initial state to an empty array and then putting things into that array so 
+// I have access to that information later in my code. 
 export const UserProvider = (props) => {
     const [userProviders, setUserProviders] = useState([])
     const [userProviderId, setUserProviderId] = useState([])
@@ -13,12 +14,14 @@ export const UserProvider = (props) => {
     const getUserProviders = () => {
         return fetch("http://localhost:8088/userProviders")
             .then(res => res.json())
+            // returning ?
             .then(setUserProviders)
     }
 
     const getUserProviderbyId = (userProviderId) => {
         return fetch(`http://localhost:8088/userProviders/${userProviderId}`)
             .then(res => res.json())
+            // returning ?
             .then(setUserProviderId)
     }
     const addFavorite = (provider) => {
@@ -46,7 +49,7 @@ export const UserProvider = (props) => {
 
     /*
         Returns a context provider which has the
-        `providers` state and the `getProviders` function as keys. This
+        `userProviders` and "userProviderId" state and the `getUserProviders`, "getUserProdviderbyId", "addNote" and "addFavorite" functions as keys. This
         allows any child elements to access them.
     */
     return (
