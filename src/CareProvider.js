@@ -15,7 +15,8 @@ export const CareProvider = (props) => {
     const getProviders = () => {
         return fetch("http://localhost:8090/providers")
             .then(res => res.json())
-            .then(setProviders)
+            // setProviders method ...returns providers variable?
+            .then(setProviders) 
     }
 
     const getProviderbyId = (providerId) => {

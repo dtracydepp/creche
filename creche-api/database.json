@@ -11,6 +11,12 @@
       "password": "Nyla",
       "name": "Alina Paige",
       "id": 2
+    },
+    {
+      "email": "jordan@me.com",
+      "password": "Dog",
+      "name": "Jordan Alexander",
+      "id": 3
     }
   ],
   "userProviders": [
@@ -55,7 +61,23 @@
       "providerName": "ST. PAUL CHRISTIAN ACADEMY (-E-)",
       "streetAddress": "5035 HILLSBORO ROAD",
       "id": 6
+    },
+    
+    {
+      "userId": 2,
+      "providerId": 53,
+      "providerName": "Early Learning Day Care Center, Inc. ",
+      "streetAddress": "2729 Whites Creek  Pike",
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "providerId": 57,
+      "providerName": "Goodall Group Day Care Home ",
+      "streetAddress": "703 North Graycroft Avenue",
+      "id": 9
     }
+       
   ],
   "notes": [
     {

@@ -12,3 +12,4 @@ export const SearchAll = (props) => {
         </>
     )
 }
+// when Search All button is clicked.. props.history.push will route to "allproviders" which renders CareList.js

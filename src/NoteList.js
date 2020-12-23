@@ -33,7 +33,7 @@ export const NoteList = ({ id }) => {
 
     })
 
-    console.log(providerNote)
+    // console.log(providerNote)
 
     return (
 
