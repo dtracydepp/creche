@@ -62,7 +62,6 @@
       "streetAddress": "5035 HILLSBORO ROAD",
       "id": 6
     },
-    
     {
       "userId": 2,
       "providerId": 53,
@@ -76,8 +75,14 @@
       "providerName": "Goodall Group Day Care Home ",
       "streetAddress": "703 North Graycroft Avenue",
       "id": 9
+    },
+    {
+      "userId": 3,
+      "providerId": 821,
+      "providerName": "ST. BERNARD ACADEMY (-E-)",
+      "streetAddress": "2304 Bernard Avenue",
+      "id": 10
     }
-       
   ],
   "notes": [
     {

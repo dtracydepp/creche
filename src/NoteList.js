@@ -7,11 +7,11 @@ import { CareContext } from "./CareProvider"
 
 
 export const NoteList = ({ id }) => {
-    const { providers, getProviders } = useContext(CareContext)
+    const { getProviders } = useContext(CareContext)
     const { notes, getNote } = useContext(NoteContext)
     const { getUserProviders, userProviders } = useContext(UserContext)
-
-    // Initialization effect hook..
+// console.log(userProviders)
+    // Initialization effect hook. getUserProviers calls all of the join table objects.
     useEffect(() => {
         getNote()
 
@@ -27,7 +27,10 @@ export const NoteList = ({ id }) => {
         getProviders()
     }, [])
 
-    const userNoteArray = userProviders.map(n => n)
+// not using userNoteArray
+    const userNoteArray = userProviders.map(n => n) 
+
+    // notes that correspond to id of the userprovider, holding userProviders and associated note, returning notes for only for saved providers 
     const providerNote = userProviders.map((up) => {
         return notes.filter(n => n.userProviderId === up.id)
 
@@ -37,17 +40,18 @@ export const NoteList = ({ id }) => {
 
     return (
 
-
+//  mapping over notes for each provider then mapping over proviers to return the note comp with saved provider and note
             providerNote.map((pn) => {
                 return (
                     pn.map((p) => {
-                        console.log(pn)
+                        // console.log(pn)
                         
                         return (
-                            <>
+                            <div key={p.id}>
                                 {parseInt(p.userProviderId) === parseInt(id) &&
-
-                                    <Note key={p.id} note={p} />}  </>
+// note comp with associated provider and note
+                                    <Note key={p.id} note={p} />}  
+                                    </div>
                         )
                     })
                 )

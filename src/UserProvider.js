@@ -14,14 +14,14 @@ export const UserProvider = (props) => {
     const getUserProviders = () => {
         return fetch("http://localhost:8088/userProviders")
             .then(res => res.json())
-            // returning ?
+            // setting state of userProviders
             .then(setUserProviders)
     }
 
     const getUserProviderbyId = (userProviderId) => {
         return fetch(`http://localhost:8088/userProviders/${userProviderId}`)
             .then(res => res.json())
-            // returning ?
+            // setting state of userProviderId
             .then(setUserProviderId)
     }
     const addFavorite = (provider) => {

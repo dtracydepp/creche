@@ -16,14 +16,14 @@ export const CareProvider = (props) => {
     const getProviders = () => {
         return fetch("http://localhost:8090/providers")
             .then(res => res.json())
-            // setProviders returns variable, providers?
+            // setting the state of providers
             .then(setProviders) 
     }
 
     const getProviderbyId = (providerId) => {
         return fetch(`http://localhost:8090/providers/${providerId}`)
         .then(res => res.json())
-        // setProviderId returns variable, providerId?
+        // setting the state of providerId
         .then(setProviderId) 
     }
 

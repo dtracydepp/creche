@@ -13,7 +13,7 @@ export const NoteProvider = (props) => {
     const getNote = () => {
         return fetch("http://localhost:8088/notes")
         .then(res => res.json())
-        // returning ?
+        // setting state of notes
             .then(setNotes)
     }
 
@@ -21,7 +21,7 @@ export const NoteProvider = (props) => {
         return fetch(`http://localhost:8088/notes/${noteid}`,{
             method: "DELETE"
         })
-        // returning ?
+        
             .then(getNote)
     }
     

@@ -1,13 +1,13 @@
-import React, { useContext, useEffect, useState } from "react"
+import React, { useContext, useEffect } from "react"
 import { CareContext } from "./CareProvider"
 import "./Care.css"
 import { UserContext } from "./UserProvider"
 
 export const CareDetails = (props) => {
-  const { providers, getProviders, setProviders, getProviderbyId } = useContext(CareContext)
+  const { providers, getProviders} = useContext(CareContext)
   const { addFavorite } = useContext(UserContext)
 
-
+// intial render pull all providers , if specific provider is selected only that provider by id will render
   const providerId = parseInt(props.match.params.providerId)
   useEffect(() => {
     getProviders()
@@ -19,7 +19,7 @@ export const CareDetails = (props) => {
   // console.log(props)
   return (
     <>
-
+{/* 1st return map through providers and return only the selected provider details, if add favorite button is clicked then push to favproviders route to render in favorite list*/}
       {
         providers.map(provider => {
           if (provider.providerId === providerId && provider.hasViolation) {

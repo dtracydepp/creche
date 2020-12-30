@@ -9,9 +9,9 @@ import { NoteList } from "./NoteList"
 export const FavoriteProviderList = (props) => {
     const { getUserProviders, userProviders } = useContext(UserContext)
     const { notes, getNote } = useContext(NoteContext)
+// console.log(props)
 
-
-    // Initialization effect hook..
+    // Initialization effect hook to get all favorite providers. if none saved then will be empty. getUserProviders calls all of the join table objects.
     useEffect(() => {
         getUserProviders()
 
@@ -27,14 +27,14 @@ export const FavoriteProviderList = (props) => {
 
 
             {
-                // mapping through all and filtering out fav providers by user
+                // mapping through all and filtering out fav providers by user. Called two functions, Care & NoteList to get render both cards
                 currentUserFavProviders.map(care => {
-                    return <>
+                    return <div key={care.id}>
                         {/* props.history.push changing the url when the button is clicked and passing the id of the provider to the url */}
                         <Care key={care.id} care={care} />
                         <NoteList id={care.id} />
                         <button id={care.id} onClick={e => props.history.push(`/provider/notes/${e.target.id}`)} > Add Note </button>
-                    </>
+                   </div>
                 })
             }
 
