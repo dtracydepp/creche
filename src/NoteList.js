@@ -11,7 +11,7 @@ export const NoteList = ({ id }) => {
     const { notes, getNote } = useContext(NoteContext)
     const { getUserProviders, userProviders } = useContext(UserContext)
 // console.log(userProviders)
-    // Initialization effect hook. getUserProviers calls all of the join table objects.
+    // Initialization effect hook. getUserProviers calls all of the join table objects. getNote calls all notes, getProviders calls all providers
     useEffect(() => {
         getNote()
 

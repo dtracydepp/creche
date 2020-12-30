@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react"
 export const UserContext = React.createContext()
 
 // pulls data from API
-// useState setting the variable initial state to an empty array and then putting things into that array so 
+// useState setting the variable (userProviders, userProviderId) initial state to an empty array and then putting things into that array so 
 // I have access to that information later in my code. 
 export const UserProvider = (props) => {
     const [userProviders, setUserProviders] = useState([])

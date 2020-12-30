@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react"
 export const CareContext = React.createContext()
 
 
-// useState setting the variable initial state to an empty array and then putting things into that array so 
+// useState setting the variable - providers and providerId initial state to an empty array and then putting things into that array so 
 // I have access to that information later in my code.
 export const CareProvider = (props) => {
     const [providers, setProviders] = useState([])

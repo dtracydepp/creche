@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react"
 export const NoteContext = React.createContext()
 
 // pulls data from API
-// useState setting the variable initial state to an empty array and then putting things into that array so 
+// useState setting the variable - notes initial state to an empty array and then putting things into that array so 
 // I have access to that information later in my code.
 export const NoteProvider = (props) => {
     const [notes, setNotes] = useState([])
