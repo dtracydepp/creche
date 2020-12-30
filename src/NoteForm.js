@@ -1,14 +1,16 @@
-import React, { useContext, useRef, useEffect } from "react"
+import React, { useContext, useRef } from "react"
 import { UserContext } from "./UserProvider"
 
 export const NoteForm = (props ) => {
     const { addNote } = useContext(UserContext)
     
-
+// useRef will be null until input in noteform or ref (value is note object), once note is entered in ln 23 its passsed to ln 8
+// and when Save note is clicked addNote runs and constructNewNote returns new note object with note that was input. text gets its value from 
+// note object the current value of what was input
     const note = useRef(null)
 
     const constructNewNote = () => {
-        // holds the variable that was declared in the url is stored
+      
         addNote({
             userProviderId: parseInt(props.match.params.userProviderId),
             text: note.current.value

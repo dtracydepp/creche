@@ -2,6 +2,7 @@ import React from "react"
 import "./Care.css"
 import {Link} from "react-router-dom"
 
+// hmtl representation that is rendered to the DOM, if provider name is clicked, then linked to CareDetails at /providers route.
 
 export const Care = ({ care }) => (
     <section className="care" key= {care.id}>

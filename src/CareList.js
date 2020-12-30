@@ -25,7 +25,7 @@ export const CareList = (props) => {
         // console.log(providers)
     }, [providers]) 
     // 
-// mapping over array of providers. care ={care} the entire object of the childcare provider. 
+// mapping over array of providers. care ={care} the entire object of the childcare provider. returning care comp
     return (
         <div className="providers">
             <h3>Nashville, TN Child Care Providers</h3>
